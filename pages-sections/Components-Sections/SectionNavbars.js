@@ -397,44 +397,6 @@ export default function SectionNavbars() {
                     Twitter
                   </Button>
                 </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    color="transparent"
-                    className={
-                      `${classes.navLink} ${classes.socialIconsButton}`
-                    }
-                  >
-                    <i
-                      className={
-                        `${classes.socialIcons
-                        } ${
-                          classes.marginRight5
-                        } fab fa-facebook`
-                      }
-                    />
-                    {' '}
-                    Facebook
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    color="transparent"
-                    className={
-                      `${classes.navLink} ${classes.socialIconsButton}`
-                    }
-                  >
-                    <i
-                      className={
-                        `${classes.socialIcons
-                        } ${
-                          classes.marginRight5
-                        } fab fa-instagram`
-                      }
-                    />
-                    {' '}
-                    Instagram
-                  </Button>
-                </ListItem>
               </List>
             )}
           />
