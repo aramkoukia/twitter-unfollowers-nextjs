@@ -1,12 +1,23 @@
-const withPlugins = require("next-compose-plugins");
-const withImages = require("next-images");
-const withSass = require("@zeit/next-sass");
-const webpack = require("webpack");
-const path = require("path");
+require("dotenv").config();
 
-module.exports = withPlugins([[withSass], [withImages]], {
-  webpack(config, options) {
-    config.resolve.modules.push(path.resolve("./"));
+const path = require("path");
+const Dotenv = require("dotenv-webpack");
+
+module.exports = {
+  webpack: config => {
+    config.plugins = config.plugins || [];
+
+    config.plugins = [
+      ...config.plugins,
+
+      // Read the .env file
+      new Dotenv({
+        path: path.join(__dirname, ".env"),
+        systemvars: true
+      })
+    ];
+
     return config;
   }
-});
+};
+
