@@ -1,11 +1,11 @@
-import Link from "next/link";
-import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
+import Link from 'next/link';
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 
 export default function AppNavbar({ user }) {
   return (
-    <Navbar bg="light" expand="lg" style={{ marginBottom: "25px" }}>
+    <Navbar bg="light" expand="lg" style={{ marginBottom: '25px' }}>
       <Container>
         <Navbar.Brand>
           <Link href="/">
@@ -39,4 +39,3 @@ export default function AppNavbar({ user }) {
     </Navbar>
   );
 }
-

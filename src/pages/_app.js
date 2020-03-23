@@ -1,9 +1,9 @@
-import React from "react";
-import App, { Container as NextContainer } from "next/app";
-import Head from "next/head";
-import Container from "react-bootstrap/Container";
-import Jumbotron from "react-bootstrap/Jumbotron";
-import Navbar from "../components/Navbar";
+import React from 'react';
+import App, { Container as NextContainer } from 'next/app';
+import Head from 'next/head';
+import Container from 'react-bootstrap/Container';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Navbar from '../components/Navbar';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -20,7 +20,7 @@ class MyApp extends App {
   constructor(props) {
     super(props);
     this.state = {
-      user: props.pageProps.user
+      user: props.pageProps.user,
     };
   }
 
@@ -49,4 +49,3 @@ class MyApp extends App {
 }
 
 export default MyApp;
-

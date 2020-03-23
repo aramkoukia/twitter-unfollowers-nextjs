@@ -1,24 +1,25 @@
-import Form from "react-bootstrap/Form";
-import Router from "next/router";
-import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
-const { useState } = require("react");
+import Form from 'react-bootstrap/Form';
+import Router from 'next/router';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+
+const { useState } = require('react');
 
 export default function ShareThought() {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
 
   async function submit(event) {
     event.preventDefault();
-    await fetch("/api/thoughts", {
-      method: "POST",
+    await fetch('/api/thoughts', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        message
-      })
+        message,
+      }),
     });
-    Router.push("/");
+    Router.push('/');
   }
 
   return (
@@ -29,7 +30,7 @@ export default function ShareThought() {
           <Form.Control
             type="text"
             placeholder="Say something"
-            onChange={e => setMessage(e.target.value)}
+            onChange={(e) => setMessage(e.target.value)}
             value={message}
           />
         </Form.Group>

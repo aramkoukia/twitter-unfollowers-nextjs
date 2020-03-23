@@ -1,27 +1,27 @@
-const express = require("express");
-const passport = require("passport");
+const express = require('express');
+const passport = require('passport');
 
 const router = express.Router();
 
-router.get("/login", passport.authenticate("auth0", {
-  scope: "openid email profile"
-}), (req, res) => res.redirect("/"));
+router.get('/login', passport.authenticate('auth0', {
+  scope: 'openid email profile',
+}), (req, res) => res.redirect('/'));
 
-router.get("/callback", (req, res, next) => {
-  passport.authenticate("auth0",  (err, user) => {
+router.get('/callback', (req, res, next) => {
+  passport.authenticate('auth0', (err, user) => {
     if (err) return next(err);
-    if (!user) return res.redirect("/login");
+    if (!user) return res.redirect('/login');
     req.logIn(user, (err) => {
       if (err) return next(err);
-      res.redirect("/");
+      res.redirect('/');
     });
   })(req, res, next);
 });
 
-router.get("/logout", (req, res) => {
+router.get('/logout', (req, res) => {
   req.logout();
 
-  const {AUTH0_DOMAIN, AUTH0_CLIENT_ID, BASE_URL} = process.env;
+  const { AUTH0_DOMAIN, AUTH0_CLIENT_ID, BASE_URL } = process.env;
   res.redirect(`https://${AUTH0_DOMAIN}/logout?client_id=${AUTH0_CLIENT_ID}&returnTo=${BASE_URL}`);
 });
 
