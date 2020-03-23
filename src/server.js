@@ -60,7 +60,7 @@ app.prepare().then(() => {
   };
 
   server.use('/profile', restrictAccess);
-  server.use('/share-thought', restrictAccess);
+  server.use('/un-followers', restrictAccess);
 
   // handling everything else with Next.js
   server.get('*', handle);

@@ -17,7 +17,7 @@ export default function AppNavbar({ user }) {
           <Nav className="mr-auto">
             {user && (
               <>
-                <Link href="/share-thought">
+                <Link href="/un-followers">
                   Unfollowers
                 </Link>
                 <Link href="/profile">
