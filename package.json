@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-passport",
+  "name": "twitter-unfollowers",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/auth0-blog/nextjs-passport.git"
+    "url": "https://github.com/aramkoukia/twitter-unfollowers-nextjs.git"
   },
   "keywords": [],
-  "author": "Bruno Krebs <krebs.bruno@gmail.com>",
+  "author": "Aram Koukia <aramkoukia@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/auth0-blog/nextjs-passport/issues"
+    "url": "https://github.com/aramkoukia/twitter-unfollowers-nextjs/issues"
   },
-  "homepage": "https://github.com/auth0-blog/nextjs-passport#readme",
+  "homepage": "https://github.com/aramkoukia/twitter-unfollowers-nextjs/blob/master/README.md",
   "dependencies": {
     "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",

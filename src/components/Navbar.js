@@ -9,7 +9,7 @@ export default function AppNavbar({ user }) {
       <Container>
         <Navbar.Brand>
           <Link href="/">
-            <a>Thoughts!</a>
+            Twitter Unfollowers
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -18,19 +18,19 @@ export default function AppNavbar({ user }) {
             {user && (
               <>
                 <Link href="/share-thought">
-                  <a className="nav-link">New Thought</a>
+                  Unfollowers
                 </Link>
                 <Link href="/profile">
-                  <a className="nav-link">Profile</a>
+                  Profile
                 </Link>
                 <Link href="/logout">
-                  <a className="nav-link">Log Out</a>
+                  Log Out
                 </Link>
               </>
             )}
             {!user && (
               <Link href="/login">
-                <a className="nav-link">Log In</a>
+                Log In
               </Link>
             )}
           </Nav>
