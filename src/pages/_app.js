@@ -38,11 +38,9 @@ class MyApp extends App {
           <title>Twitter Unfollowers</title>
         </Head>
         <Navbar user={this.state.user} />
-        <Container>
-          <Jumbotron>
-            <Component {...props} />
-          </Jumbotron>
-        </Container>
+        <Jumbotron>
+          <Component {...props} />
+        </Jumbotron>
       </NextContainer>
     );
   }

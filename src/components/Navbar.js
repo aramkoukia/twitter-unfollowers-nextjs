@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import { Button } from 'react-bootstrap';
 
 export default function AppNavbar({ user }) {
   return (
@@ -9,7 +10,9 @@ export default function AppNavbar({ user }) {
       <Container>
         <Navbar.Brand>
           <Link href="/">
-            Twitter Unfollowers
+            <Button>
+              Twitter Unfollowers
+            </Button>
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -18,19 +21,27 @@ export default function AppNavbar({ user }) {
             {user && (
               <>
                 <Link href="/un-followers">
-                  Unfollowers
+                  <Button>
+                    Unfollowers
+                  </Button>
                 </Link>
                 <Link href="/profile">
-                  Profile
+                  <Button>
+                    Profile
+                  </Button>
                 </Link>
                 <Link href="/logout">
-                  Log Out
+                  <Button>
+                    Log Out
+                  </Button>
                 </Link>
               </>
             )}
             {!user && (
               <Link href="/login">
-                Log In
+                <Button>
+                  Log In
+                </Button>
               </Link>
             )}
           </Nav>
