@@ -31,4 +31,8 @@ router.post('/api/thoughts', ensureAuthenticated, (req, res) => {
   res.send({ message: 'Thanks!' });
 });
 
+router.post('/api/unfollowers', ensureAuthenticated, (req, res) => {
+  res.send({ message: 'Thanks!' });
+});
+
 module.exports = router;

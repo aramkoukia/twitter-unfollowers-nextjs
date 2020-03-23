@@ -7,7 +7,7 @@ const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
 const uid = require('uid-safe');
 const authRoutes = require('./auth-routes');
-const thoughtsAPI = require('./thoughts-api');
+const unfollowersAPI = require('./unfollowers-api');
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({
@@ -51,7 +51,7 @@ app.prepare().then(() => {
   server.use(passport.session());
   server.use(authRoutes);
 
-  server.use(thoughtsAPI);
+  server.use(unfollowersAPI);
 
   // 6 - you are restricting access to some routes
   const restrictAccess = (req, res, next) => {
